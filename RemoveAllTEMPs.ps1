@@ -149,9 +149,9 @@ Function Clear-Folder {
         [string]$LogDescription
     )
     try {
-        if (Test-Path -Path $Path) {
+        if (Test-Path -Path "$Path\*") {
             Write-Log "Eliminando archivos en $LogDescription ($Path)..."
-            Remove-Item -Path $path -Recurse -Force -ErrorAction SilentlyContinue
+            Remove-Item -Path "$Path\*" -Recurse -Force -ErrorAction SilentlyContinue
         }
         else {
             Write-Log "La carpeta $Path no existe. No se realizaron cambios."
