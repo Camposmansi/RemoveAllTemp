@@ -15,10 +15,10 @@
 	.NOTES
 		===========================================================================
 		Created By:		Carlos Campos
-		Created Date:	31/01/2025, 11:40 PM
+		Created Date:	07/10/2026, 11:40 PM
 		Version:		3.8
 		File:			Remove All TEMPs.ps1
-		Copyright (c)2025 Campos
+		Copyright (c)2025-2026 Campos
 		===========================================================================
 
 	.LICENSE
@@ -68,7 +68,7 @@ $actWinOLD  = 1
 $actPanther = 1 #>
 
 # Ruta del archivo de log
-$logFile = "00 CleanupScriptLog.log"
+$logFile = "CleanupScriptLog.log"
 $logPath = "$env:windir\Logs\Software"
 
 #####################################################
@@ -96,6 +96,7 @@ function Set-ConsoleTitle {
         
     $host.ui.RawUI.WindowTitle = $ConsoleTitle
 }
+
 # Función para escribir logs
 function Write-Log {
     <#
