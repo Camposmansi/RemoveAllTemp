@@ -386,36 +386,36 @@ Clear-Host
 $Success = $true
 If ($SystemInstall.IsPresent) {
     $Status = Clear-Update
-    If ($Status = $false) {
+    If ($Status -eq $false) {
         $Success = $false
     }
     $Status = Clear-Temp
-    If ($Status = $false) {
+    If ($Status -eq $false) {
         $Success = $false
     }
     $Status = Clear-WinOLD
-    If ($Status = $false) {
+    If ($Status -eq $false) {
         $Success = $false
     }
     $Status = Clear-Panther
-    If ($Status = $false) {
+    If ($Status -eq $false) {
         $Success = $false
     }
 }else {
     $Status = Clear-Update
-    If ($Status = $false) {
+    If ($Status -eq $false) {
         $Success = $false
     }
     $Status = Clear-Temp
-    If ($Status = $false) {
+    If ($Status -eq $false) {
         $Success = $false
     }
     $Status = Clear-WinOLD
-    If ($Status = $false) {
+    If ($Status -eq $false) {
         $Success = $false
     }
     $Status = Clear-Panther
-    If ($Status = $false) {
+    If ($Status -eq $false) {
         $Success = $false
     }
 }
